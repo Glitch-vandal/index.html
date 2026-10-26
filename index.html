@@ -6,7 +6,7 @@
     <title>SecuTrack | Vulnerability Testing & Security Dashboard</title>
     <meta
       name="description"
-      content="Security dashboard for vulnerability testing, risk monitoring, and compliance oversight."
+      content="Interactive vulnerability testing and security dashboard with live security insights and risk tracking."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +40,7 @@
     </header>
 
     <main class="container">
-      <section class="hero" id="overview">
+      <section class="hero reveal" id="overview">
         <div class="hero-copy">
           <span class="eyebrow">Security Operations Center</span>
           <h1>Vulnerability testing that keeps your environment resilient.</h1>
@@ -56,21 +56,21 @@
 
           <div class="hero-stats">
             <div>
-              <strong>4.6K</strong>
+              <strong data-target="4600" data-suffix="K">0</strong>
               <span>Assets monitored</span>
             </div>
             <div>
-              <strong>98.7%</strong>
+              <strong data-target="98.7" data-suffix="%">0</strong>
               <span>Coverage</span>
             </div>
             <div>
-              <strong>12 mins</strong>
+              <strong data-target="12" data-suffix=" mins">0</strong>
               <span>Avg. response</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-panel panel">
+        <div class="hero-panel panel reveal-card">
           <div class="panel-header">
             <div>
               <p>Security posture</p>
@@ -102,46 +102,46 @@
         </div>
       </section>
 
-      <section class="metrics-grid">
-        <article class="panel metric-card danger">
+      <section class="metrics-grid reveal">
+        <article class="panel metric-card danger reveal-card">
           <div class="metric-top">
             <span>Critical Findings</span>
             <i>▲ 17%</i>
           </div>
-          <h2>23</h2>
+          <h2 data-target="23">0</h2>
           <small>Across 5 production systems</small>
         </article>
 
-        <article class="panel metric-card warning">
+        <article class="panel metric-card warning reveal-card">
           <div class="metric-top">
             <span>Open Incidents</span>
             <i>▼ 8%</i>
           </div>
-          <h2>76</h2>
+          <h2 data-target="76">0</h2>
           <small>Pending triage and remediation</small>
         </article>
 
-        <article class="panel metric-card success">
+        <article class="panel metric-card success reveal-card">
           <div class="metric-top">
             <span>Patch Compliance</span>
             <i>▲ 9%</i>
           </div>
-          <h2>94%</h2>
+          <h2 data-target="94" data-suffix="%">0</h2>
           <small>Target remains above SLA threshold</small>
         </article>
 
-        <article class="panel metric-card info">
+        <article class="panel metric-card info reveal-card">
           <div class="metric-top">
             <span>Threat Intel Feed</span>
             <i>Live</i>
           </div>
-          <h2>1,284</h2>
+          <h2 data-target="1284">0</h2>
           <small>Indicators matched in last 24h</small>
         </article>
       </section>
 
-      <section class="dashboard-grid" id="scan-results">
-        <article class="panel chart-panel">
+      <section class="dashboard-grid reveal" id="scan-results">
+        <article class="panel chart-panel reveal-card">
           <div class="section-head">
             <div>
               <p class="section-label">Vulnerability trend</p>
@@ -153,34 +153,34 @@
           <div class="bar-chart" aria-label="Vulnerability chart">
             <div class="bars">
               <div class="bar-group">
-                <span class="bar critical" style="height: 76%"></span>
+                <span class="bar critical" data-height="76" style="height: 0%"></span>
                 <label>Jan</label>
               </div>
               <div class="bar-group">
-                <span class="bar high" style="height: 58%"></span>
+                <span class="bar high" data-height="58" style="height: 0%"></span>
                 <label>Feb</label>
               </div>
               <div class="bar-group">
-                <span class="bar medium" style="height: 64%"></span>
+                <span class="bar medium" data-height="64" style="height: 0%"></span>
                 <label>Mar</label>
               </div>
               <div class="bar-group">
-                <span class="bar low" style="height: 52%"></span>
+                <span class="bar low" data-height="52" style="height: 0%"></span>
                 <label>Apr</label>
               </div>
               <div class="bar-group">
-                <span class="bar critical" style="height: 70%"></span>
+                <span class="bar critical" data-height="70" style="height: 0%"></span>
                 <label>May</label>
               </div>
               <div class="bar-group">
-                <span class="bar high" style="height: 48%"></span>
+                <span class="bar high" data-height="48" style="height: 0%"></span>
                 <label>Jun</label>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="panel scan-panel">
+        <article class="panel scan-panel reveal-card">
           <div class="section-head">
             <div>
               <p class="section-label">Recent job activity</p>
@@ -221,7 +221,7 @@
         </article>
       </section>
 
-      <section class="risk-section" id="risk-map">
+      <section class="risk-section reveal" id="risk-map">
         <div class="section-head wide">
           <div>
             <p class="section-label">Risk map</p>
@@ -231,45 +231,45 @@
         </div>
 
         <div class="risk-grid">
-          <div class="panel risk-card">
+          <div class="panel risk-card reveal-card">
             <header>
               <span>Application Layer</span>
-              <b>87</b>
+              <b data-target="87" data-suffix="">0</b>
             </header>
-            <div class="progress"><span style="width: 87%"></span></div>
+            <div class="progress"><span data-width="87"></span></div>
             <small>SQL injection, SSRF, auth bypass</small>
           </div>
 
-          <div class="panel risk-card">
+          <div class="panel risk-card reveal-card">
             <header>
               <span>Infrastructure</span>
-              <b>72</b>
+              <b data-target="72" data-suffix="">0</b>
             </header>
-            <div class="progress"><span style="width: 72%"></span></div>
+            <div class="progress"><span data-width="72"></span></div>
             <small>Open ports, kernel drift, secrets exposure</small>
           </div>
 
-          <div class="panel risk-card">
+          <div class="panel risk-card reveal-card">
             <header>
               <span>Cloud Config</span>
-              <b>64</b>
+              <b data-target="64" data-suffix="">0</b>
             </header>
-            <div class="progress"><span style="width: 64%"></span></div>
+            <div class="progress"><span data-width="64"></span></div>
             <small>IAM misconfigurations and bucket exposure</small>
           </div>
 
-          <div class="panel risk-card">
+          <div class="panel risk-card reveal-card">
             <header>
               <span>Third-Party</span>
-              <b>41</b>
+              <b data-target="41" data-suffix="">0</b>
             </header>
-            <div class="progress"><span style="width: 41%"></span></div>
+            <div class="progress"><span data-width="41"></span></div>
             <small>Dependency alerts and vulnerable modules</small>
           </div>
         </div>
       </section>
 
-      <section class="assets-section" id="assets">
+      <section class="assets-section reveal" id="assets">
         <div class="section-head wide">
           <div>
             <p class="section-label">Asset inventory</p>
@@ -277,7 +277,7 @@
           </div>
         </div>
 
-        <div class="table-panel panel">
+        <div class="table-panel panel reveal-card">
           <table>
             <thead>
               <tr>
@@ -326,85 +326,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
