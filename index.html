@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecuTrack | Vulnerability Testing & Security Dashboard</title>
+    <meta
+      name="description"
+      content="Security dashboard for vulnerability testing, risk monitoring, and compliance oversight."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div>
+          <span class="brand-name">SecuTrack</span>
+          <small>Threat Defense</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#scan-results">Scan Results</a>
+        <a href="#risk-map">Risk Map</a>
+        <a href="#assets">Assets</a>
+      </nav>
+
+      <button class="primary-btn">Run Full Scan</button>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <span class="eyebrow">Security Operations Center</span>
+          <h1>Vulnerability testing that keeps your environment resilient.</h1>
+          <p>
+            Monitor web, cloud, and application risk in real time with structured
+            security workflows, exposure scoring, and prioritized remediation.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn">Launch Dashboard</button>
+            <button class="secondary-btn">View Reports</button>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>4.6K</strong>
+              <span>Assets monitored</span>
+            </div>
+            <div>
+              <strong>98.7%</strong>
+              <span>Coverage</span>
+            </div>
+            <div>
+              <strong>12 mins</strong>
+              <span>Avg. response</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel panel">
+          <div class="panel-header">
+            <div>
+              <p>Security posture</p>
+              <h3>82 / 100</h3>
+            </div>
+            <span class="status-pill success">Healthy</span>
+          </div>
+
+          <div class="score-ring">
+            <div class="ring-inner">
+              <strong>82%</strong>
+            </div>
+          </div>
+
+          <div class="mini-trend">
+            <div>
+              <span>Critical</span>
+              <b>03</b>
+            </div>
+            <div>
+              <span>High</span>
+              <b>14</b>
+            </div>
+            <div>
+              <span>Medium</span>
+              <b>28</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="panel metric-card danger">
+          <div class="metric-top">
+            <span>Critical Findings</span>
+            <i>▲ 17%</i>
+          </div>
+          <h2>23</h2>
+          <small>Across 5 production systems</small>
+        </article>
+
+        <article class="panel metric-card warning">
+          <div class="metric-top">
+            <span>Open Incidents</span>
+            <i>▼ 8%</i>
+          </div>
+          <h2>76</h2>
+          <small>Pending triage and remediation</small>
+        </article>
+
+        <article class="panel metric-card success">
+          <div class="metric-top">
+            <span>Patch Compliance</span>
+            <i>▲ 9%</i>
+          </div>
+          <h2>94%</h2>
+          <small>Target remains above SLA threshold</small>
+        </article>
+
+        <article class="panel metric-card info">
+          <div class="metric-top">
+            <span>Threat Intel Feed</span>
+            <i>Live</i>
+          </div>
+          <h2>1,284</h2>
+          <small>Indicators matched in last 24h</small>
+        </article>
+      </section>
+
+      <section class="dashboard-grid" id="scan-results">
+        <article class="panel chart-panel">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Vulnerability trend</p>
+              <h3>Exposure by severity</h3>
+            </div>
+            <button class="tab-btn active">30d</button>
+          </div>
+
+          <div class="bar-chart" aria-label="Vulnerability chart">
+            <div class="bars">
+              <div class="bar-group">
+                <span class="bar critical" style="height: 76%"></span>
+                <label>Jan</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar high" style="height: 58%"></span>
+                <label>Feb</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar medium" style="height: 64%"></span>
+                <label>Mar</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar low" style="height: 52%"></span>
+                <label>Apr</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar critical" style="height: 70%"></span>
+                <label>May</label>
+              </div>
+              <div class="bar-group">
+                <span class="bar high" style="height: 48%"></span>
+                <label>Jun</label>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel scan-panel">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Recent job activity</p>
+              <h3>Scan queue</h3>
+            </div>
+          </div>
+
+          <ul class="scan-list">
+            <li>
+              <div>
+                <strong>Web App - Production</strong>
+                <span>Completed 12 mins ago</span>
+              </div>
+              <span class="status-pill danger">High</span>
+            </li>
+            <li>
+              <div>
+                <strong>API Gateway</strong>
+                <span>Running baseline review</span>
+              </div>
+              <span class="status-pill warning">Medium</span>
+            </li>
+            <li>
+              <div>
+                <strong>Cloud IAM Audit</strong>
+                <span>Policy analysis complete</span>
+              </div>
+              <span class="status-pill success">Clean</span>
+            </li>
+            <li>
+              <div>
+                <strong>Container Fleet</strong>
+                <span>Image drift detected</span>
+              </div>
+              <span class="status-pill danger">Critical</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="risk-section" id="risk-map">
+        <div class="section-head wide">
+          <div>
+            <p class="section-label">Risk map</p>
+            <h3>Exposure matrix</h3>
+          </div>
+          <button class="secondary-btn small">Export report</button>
+        </div>
+
+        <div class="risk-grid">
+          <div class="panel risk-card">
+            <header>
+              <span>Application Layer</span>
+              <b>87</b>
+            </header>
+            <div class="progress"><span style="width: 87%"></span></div>
+            <small>SQL injection, SSRF, auth bypass</small>
+          </div>
+
+          <div class="panel risk-card">
+            <header>
+              <span>Infrastructure</span>
+              <b>72</b>
+            </header>
+            <div class="progress"><span style="width: 72%"></span></div>
+            <small>Open ports, kernel drift, secrets exposure</small>
+          </div>
+
+          <div class="panel risk-card">
+            <header>
+              <span>Cloud Config</span>
+              <b>64</b>
+            </header>
+            <div class="progress"><span style="width: 64%"></span></div>
+            <small>IAM misconfigurations and bucket exposure</small>
+          </div>
+
+          <div class="panel risk-card">
+            <header>
+              <span>Third-Party</span>
+              <b>41</b>
+            </header>
+            <div class="progress"><span style="width: 41%"></span></div>
+            <small>Dependency alerts and vulnerable modules</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="assets-section" id="assets">
+        <div class="section-head wide">
+          <div>
+            <p class="section-label">Asset inventory</p>
+            <h3>Systems under protection</h3>
+          </div>
+        </div>
+
+        <div class="table-panel panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Owner</th>
+                <th>Criticality</th>
+                <th>Last Scan</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Public Web Portal</td>
+                <td>AppSec</td>
+                <td><span class="tag critical">Critical</span></td>
+                <td>2h ago</td>
+                <td><span class="status-inline danger">Needs fix</span></td>
+              </tr>
+              <tr>
+                <td>Identity Service</td>
+                <td>Platform Ops</td>
+                <td><span class="tag high">High</span></td>
+                <td>1d ago</td>
+                <td><span class="status-inline warning">Monitoring</span></td>
+              </tr>
+              <tr>
+                <td>Payment API</td>
+                <td>Payments</td>
+                <td><span class="tag medium">Medium</span></td>
+                <td>4h ago</td>
+                <td><span class="status-inline success">Stable</span></td>
+              </tr>
+              <tr>
+                <td>Data Warehouse</td>
+                <td>Data Platform</td>
+                <td><span class="tag critical">Critical</span></td>
+                <td>6h ago</td>
+                <td><span class="status-inline danger">Review</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
